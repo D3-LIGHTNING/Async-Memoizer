@@ -1,15 +1,5 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# async_memoizer
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
 A simple Dart utility class, `AsyncMemoizer`, to prevent re-running an asynchronous computation while it is already in progress.
  
 This is useful for "debouncing" expensive operations like network requests or heavy calculations. If you request the result multiple times while the operation is in-flight, it will only be executed once, and all callers will receive the same `Future`.
